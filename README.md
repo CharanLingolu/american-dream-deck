@@ -1,6 +1,7 @@
 # American Dream: Interactive Commercial Pitch Deck
 
 Live Deployment: https://american-dream-deck-rho.vercel.app/
+
 Repository: https://github.com/CharanLingolu/american-dream-deck
 
 An "Awwwards-level" interactive sales tool designed for the commercial leasing team of the American Dream mega-mall. This project moves beyond static PDFs, utilizing Next.js, highly optimized GSAP scroll physics, and AI-generated architectural prototyping to drive emotional buy-in from prospective luxury flagship tenants and global event sponsors.
