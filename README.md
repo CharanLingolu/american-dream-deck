@@ -1,7 +1,7 @@
 # American Dream: Interactive Commercial Pitch Deck
 
-**Live Deployment:** [Insert Your Vercel Link Here]
-**Repository:** [Insert Your GitHub Link Here]
+Live Deployment: https://american-dream-deck-rho.vercel.app/
+Repository: https://github.com/CharanLingolu/american-dream-deck
 
 An "Awwwards-level" interactive sales tool designed for the commercial leasing team of the American Dream mega-mall. This project moves beyond static PDFs, utilizing Next.js, highly optimized GSAP scroll physics, and AI-generated architectural prototyping to drive emotional buy-in from prospective luxury flagship tenants and global event sponsors.
 
@@ -51,5 +51,5 @@ To run this project locally:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/](https://github.com/)[Your-Username]/american-dream-deck.git
+   git clone https://github.com/CharanLingolu/american-dream-deck.git
    ```
