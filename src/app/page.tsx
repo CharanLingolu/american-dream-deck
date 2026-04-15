@@ -403,11 +403,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Image Side */}
           <div className="w-full lg:w-5/12 relative mt-10 md:mt-0 z-10 flex justify-center lg:justify-end">
-            {/* THE FIX: This new constrained wrapper forces the image to be smaller, and keeps the data card attached to it */}
             <div className="relative w-full max-w-[300px] sm:max-w-sm md:max-w-md">
-              {/* The Hologram Image */}
               <div className="group floating-hologram relative w-full aspect-square md:aspect-[4/5] rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] border border-white/5">
                 <Image
                   src="/events-activation.jpg"
