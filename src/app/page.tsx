@@ -436,7 +436,7 @@ export default function Home() {
 
           <div className="magnetic cursor-pointer">
             <a
-              href="mailto:leasing@americandream.com?subject=High-Priority Inquiry: American Dream Leasing"
+              href="mailto:leasing@americandream.com?subject=High-Priority%20Inquiry:%20American%20Dream%20Leasing"
               className="block px-10 md:px-16 py-6 md:py-8 border border-white/20 rounded-full bg-white text-black hover:bg-transparent hover:text-white hover:border-white transition-all duration-500"
             >
               <span className="text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase font-bold">
