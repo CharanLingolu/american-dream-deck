@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -13,6 +13,18 @@ if (typeof window !== "undefined") {
 export default function Home() {
   const container = useRef(null);
   const cursorRef = useRef(null);
+
+  const [copied, setCopied] = useState(false);
+
+  const handleContactClick = () => {
+    navigator.clipboard.writeText("leasing@americandream.com");
+
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+
+    window.location.href =
+      "mailto:leasing@americandream.com?subject=High-Priority%20Inquiry:%20American%20Dream%20Leasing";
+  };
 
   useEffect(() => {
     const isDesktop = window.matchMedia("(pointer: fine)").matches;
@@ -434,15 +446,18 @@ export default function Home() {
             <span className="italic font-light text-white/30">Ends Here.</span>
           </h2>
 
-          <div className="magnetic cursor-pointer">
-            <a
-              href="mailto:leasing@americandream.com?subject=High-Priority%20Inquiry:%20American%20Dream%20Leasing"
-              className="block px-10 md:px-16 py-6 md:py-8 border border-white/20 rounded-full bg-white text-black hover:bg-transparent hover:text-white hover:border-white transition-all duration-500"
+          <div className="magnetic cursor-pointer" onClick={handleContactClick}>
+            <div
+              className={`px-10 md:px-16 py-6 md:py-8 border rounded-full transition-all duration-500 flex items-center justify-center min-w-[250px] ${
+                copied
+                  ? "bg-green-500 border-green-500 text-black"
+                  : "border-white/20 bg-white text-black hover:bg-transparent hover:text-white hover:border-white"
+              }`}
             >
-              <span className="text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase font-bold">
-                Initiate Contact
+              <span className="text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase font-bold text-center">
+                {copied ? "Email Copied!" : "Initiate Contact"}
               </span>
-            </a>
+            </div>
           </div>
         </div>
       </footer>
