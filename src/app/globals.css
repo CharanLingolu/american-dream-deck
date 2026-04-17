@@ -1,7 +1,19 @@
 @import "tailwindcss";
 
 body {
-  background-color: #020202;
+  background-color: #050505;
   color: #ffffff;
   overflow-x: hidden;
+}
+
+button,
+a,
+[role="button"] {
+  cursor: pointer !important;
+}
+
+button,
+a {
+  user-select: none;
+  -webkit-user-select: none;
 }
