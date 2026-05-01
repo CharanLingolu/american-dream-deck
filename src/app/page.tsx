@@ -57,9 +57,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
               >
-                <h2 className="text-[10px] md:text-xs tracking-[0.6em] md:tracking-[0.8em] uppercase text-[#D4AF37] mb-8 font-semibold">
-                  A Liat AI Assessment
-                </h2>
+
                 <h1 className="font-display text-6xl md:text-8xl xl:text-9xl font-light tracking-tighter leading-[0.85]">
                   AMERICAN<br />
                   <span className="font-medium italic gold-text block mt-2">DREAM</span>
