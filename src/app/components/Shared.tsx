@@ -5,14 +5,26 @@ import { useGSAP } from "@gsap/react";
 
 if (typeof window !== "undefined") gsap.registerPlugin(useGSAP);
 
+import { getCldVideoUrl } from "next-cloudinary";
+
 export const VideoPlayer = ({ src, className }: { src: string; className: string }) => {
   const [loaded, setLoaded] = useState(false);
+  
+  // If src is local (like /hero.mp4), strip the slash and extension to get the Cloudinary public ID.
+  const isLocal = src.startsWith("/");
+  const publicId = isLocal ? src.replace(/^\//, '').replace(/\.[^/.]+$/, "") : src;
+  
+  // Generate an optimized Cloudinary video URL if the cloud name is provided
+  const videoUrl = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+    ? getCldVideoUrl({ src: publicId, format: "auto", quality: "auto" })
+    : src;
+
   return (
     <>
       <div className={`absolute inset-0 bg-[#0a0a0a] transition-opacity duration-700 ${loaded ? "opacity-0 pointer-events-none" : "opacity-100"}`} />
       <video autoPlay loop muted playsInline onLoadedData={() => setLoaded(true)}
         className={`${className} transition-opacity duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}>
-        <source src={src} type="video/mp4" />
+        <source src={videoUrl} type="video/mp4" />
       </video>
     </>
   );
