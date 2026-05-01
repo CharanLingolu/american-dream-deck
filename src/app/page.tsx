@@ -129,7 +129,7 @@ export default function Home() {
             </div>
 
             {/* Immersive Bottom Timeline Navigation */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 z-50 flex flex-col justify-end pb-8 px-4 md:px-16 xl:px-24 pointer-events-none bg-gradient-to-t from-[#020202] via-[#020202]/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 h-40 md:h-32 z-50 flex flex-col justify-end pb-16 md:pb-8 px-4 md:px-16 xl:px-24 pointer-events-none bg-gradient-to-t from-[#020202] via-[#020202]/80 to-transparent">
               <div className="flex gap-4 md:gap-4 items-end w-full pointer-events-auto overflow-x-auto overflow-y-visible no-scrollbar snap-x snap-mandatory pt-6 pb-2">
                 {MODULES.map((mod, i) => {
                    const isActive = i === currentIndex;
