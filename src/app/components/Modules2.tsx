@@ -68,7 +68,7 @@ export function DemographicsModule() {
 
 const BRANDS = [
   { name: "Hermès", category: "Ultra Luxury", img: "/luxury-retail.mp4" },
-  { name: "Saint Laurent", category: "Luxury Fashion", img: "/fashion.mp4" },
+  { name: "Saint Laurent", category: "Luxury Fashion", img: "/Fashion.mp4" },
   { name: "Tiffany & Co.", category: "Jewelry", img: "/jewellery.mp4" },
 ];
 
